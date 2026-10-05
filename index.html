@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BugOrFeature</title>
+<meta name="description" content="BugOrFeature, independent game developer.">
 <style>
-  :root { --bg: #f7f2e8; --ink: #2b2730; --muted: #6b6470; --card: #fffdf8; --accent: #9ecc78; }
+  :root { --bg: #f7f2e8; --ink: #2b2730; --muted: #6b6470; --card: #fffdf8; --accent: #9ecc78; --accent-ink: #2b4519; }
   @media (prefers-color-scheme: dark) { :root { --bg: #1f1d24; --ink: #f2ede4; --muted: #b5adb9; --card: #2a2731; } }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
   main { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
@@ -13,20 +14,28 @@
   p.lead { margin: 0 0 32px; color: var(--muted); }
   .game { background: var(--card); border-radius: 16px; padding: 20px 22px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
   .game h2 { margin: 0 0 6px; font-size: 1.3rem; }
-  .game p { margin: 0 0 12px; }
+  .game p { margin: 0 0 14px; }
+  .stores { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+  .stores a { background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; padding: 8px 16px; border-radius: 999px; }
   a { color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+  .small { font-size: .9rem; color: var(--muted); }
   footer { margin-top: 40px; color: var(--muted); font-size: .9rem; }
 </style>
 </head>
 <body>
 <main>
   <h1>BugOrFeature</h1>
-  <p class="lead">Small games for phones. / Piccoli giochi per telefono.</p>
+  <p class="lead">Independent game developer.</p>
 
   <section class="game">
     <h2>Farty Pigeon</h2>
-    <p>A pigeon that flies by farting, ten bosses and a lot of birds. Android, coming soon.<br>
-       Un piccione che vola a scoregge, dieci boss e tanti uccelli. Android, in arrivo.</p>
+    <p>A pigeon that flies by farting, ten bosses and a sky full of birds.</p>
+    <div class="stores">
+      <!-- Store links: replace "#" with the Google Play and App Store pages. -->
+      <a href="#" id="farty-pigeon-android">Android</a>
+      <a href="#" id="farty-pigeon-iphone">iPhone</a>
+    </div>
+    <p class="small"><a href="fartypigeon/privacy.html">Privacy policy</a></p>
   </section>
 
   <footer>© 2026 BugOrFeature</footer>
