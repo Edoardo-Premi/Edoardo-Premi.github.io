@@ -5,6 +5,9 @@ OWNERDOMAIN=edoardo-premi.github.io
 # Unity LevelPlay / ironSource (direct)
 ironsrc.com, 688919, DIRECT
 
+# Unity Ads (direct)
+unity.com, 6871963325848, DIRECT, 96cabb5fbdde37a7
+
 # ironSource authorized resellers (list from docs.unity.com, updated 2026-10-05)
 media.net, 8CUH2L333, RESELLER
 sharethrough.com, 3817, RESELLER, d53b998a7bd4ecd2
