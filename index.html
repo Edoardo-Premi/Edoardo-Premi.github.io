@@ -5,21 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BugOrFeature</title>
 <meta name="description" content="BugOrFeature, independent game developer.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  :root { --bg: #f7f2e8; --ink: #2b2730; --muted: #6b6470; --card: #fffdf8; --accent: #9ecc78; --accent-ink: #2b4519; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #1f1d24; --ink: #f2ede4; --muted: #b5adb9; --card: #2a2731; } }
+  :root { --bg: #f7f2e8; --ink: #2b2730; --muted: #6b6470; --card: #fffdf8; --line: #e8dfcf; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #1f1d24; --ink: #f2ede4; --muted: #b5adb9; --card: #2a2731; --line: #3a3642; } }
+  * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
-  h1 { margin: 0 0 4px; font-size: 2rem; }
-  p.lead { margin: 0 0 32px; color: var(--muted); }
-  .game { background: var(--card); border-radius: 16px; padding: 20px 22px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
-  .game h2 { margin: 0 0 6px; font-size: 1.3rem; }
-  .game p { margin: 0 0 14px; }
-  .stores { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
-  .stores a { background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; padding: 8px 16px; border-radius: 999px; }
-  a { color: inherit; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
-  .small { font-size: .9rem; color: var(--muted); }
-  footer { margin-top: 40px; color: var(--muted); font-size: .9rem; }
+  main { max-width: 880px; margin: 0 auto; padding: 56px 16px 40px; }
+  h1, h3 { font-family: Fredoka, system-ui, sans-serif; font-weight: 600; }
+  h1 { margin: 0 0 4px; font-size: 2.4rem; }
+  .lead { margin: 0 0 44px; color: var(--muted); }
+  h2 { margin: 0 0 16px; font-size: .95rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+  .project { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; color: inherit; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+  .project:hover, .project:focus-visible { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+  .project .banner { display: block; width: 100%; height: auto; }
+  .project .body { display: flex; gap: 14px; align-items: center; padding: 16px 18px 18px; }
+  .project .icon { width: 56px; height: 56px; border-radius: 14px; flex: none; }
+  .project h3 { margin: 0; font-size: 1.3rem; }
+  .project p { margin: 2px 0 0; color: var(--muted); font-size: .95rem; }
+  footer { margin-top: 56px; color: var(--muted); font-size: .9rem; }
 </style>
 </head>
 <body>
@@ -27,16 +35,19 @@
   <h1>BugOrFeature</h1>
   <p class="lead">Independent game developer.</p>
 
-  <section class="game">
-    <h2>Farty Pigeon</h2>
-    <p>A pigeon that flies by farting, ten bosses and a sky full of birds.</p>
-    <div class="stores">
-      <!-- Store links: replace "#" with the Google Play and App Store pages. -->
-      <a href="#" id="farty-pigeon-android">Android</a>
-      <a href="#" id="farty-pigeon-iphone">iPhone</a>
-    </div>
-    <p class="small"><a href="fartypigeon/privacy.html">Privacy policy</a></p>
-  </section>
+  <h2>Games</h2>
+  <div class="projects">
+    <a class="project" href="fartypigeon/">
+      <img class="banner" src="fartypigeon/images/banner.jpg" alt="Farty Pigeon: a pigeon flying over the city park" width="1024" height="500">
+      <div class="body">
+        <img class="icon" src="fartypigeon/images/icon-256.png" alt="" width="56" height="56">
+        <div>
+          <h3>Farty Pigeon</h3>
+          <p>Fart to fly, dodge obstacles and beat ten silly bosses.</p>
+        </div>
+      </div>
+    </a>
+  </div>
 
   <footer>© 2026 BugOrFeature</footer>
 </main>
